@@ -6,6 +6,7 @@ import Transaction from "./components/Transaction";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
+import Dashboard from "./components/Dashboard";
 
 function AppContent() {
   const location = useLocation();
@@ -40,11 +41,21 @@ function AppContent() {
   </PrivateRoute>
 } />
 
-<Route path="/dashboard" element={
+{/* <Route path="/dashboard" element={
   <PrivateRoute>
     <h1>Dashboard Page</h1>
   </PrivateRoute>
-} />
+} /> */}
+
+<Route
+  path="/dashboard"
+  element={
+    <PrivateRoute>
+      <Dashboard />
+    </PrivateRoute>
+  }
+/>
+
       </Routes>
     </>
   );

@@ -39,7 +39,6 @@ const addIncome = async (e) => {
 e.preventDefault();
 
 await axios.post("http://127.0.0.1:8000/api/income",{
-    user_id:103,
     source:source,
     amount:amount,
     frequency:frequency,

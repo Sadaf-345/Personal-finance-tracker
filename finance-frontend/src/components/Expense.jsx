@@ -41,7 +41,6 @@ const addExpense = async (e) => {
 e.preventDefault();
 
 await axios.post("http://127.0.0.1:8000/api/expense",{
-    user_id:103,
     category:category,
     amount:amount,
     description:description,

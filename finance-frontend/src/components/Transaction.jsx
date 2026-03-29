@@ -25,6 +25,7 @@ const fetchTransaction = async ()=>{
 }
 return(
 <div>
+  <br /><h3>Transaction History</h3>
     <br /><br />
 <table className="table table-bordered table-hover">
 <thead>
