@@ -39,14 +39,14 @@ function Login() {
             <h3 className="text-center mb-4">Login</h3>
 
             <form onSubmit={handleLogin}>
-              
+
               <div className="mb-3">
                 <label>Email</label>
                 <input
                   type="email"
                   className="form-control"
                   value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -57,7 +57,7 @@ function Login() {
                   type="password"
                   className="form-control"
                   value={password}
-                  onChange={(e)=>setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>

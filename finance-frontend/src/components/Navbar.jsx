@@ -5,19 +5,19 @@ import axios from "axios";
 function Navbar() {
   const navigate = useNavigate();
   const handleLogout = async () => {
-  const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token");
 
-  await axios.post("http://localhost:8000/api/logout", {}, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  });
+    await axios.post("http://localhost:8000/api/logout", {}, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
 
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
 
-  navigate("/login");
-};
+    navigate("/login");
+  };
   return (
     <nav style={styles.nav}>
       <h2 style={styles.logo}>Finance Tracker</h2>
@@ -32,7 +32,7 @@ function Navbar() {
         </button>
       </div>
     </nav>
-    
+
   );
 }
 

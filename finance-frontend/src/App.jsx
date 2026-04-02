@@ -20,41 +20,37 @@ function AppContent() {
       {!hideNavbar && <Navbar />}
 
       <Routes>
-         <Route path="/" element={<Login />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        
         <Route path="/income" element={
-  <PrivateRoute>
-    <Income />
-  </PrivateRoute>
-} />
+          <PrivateRoute>
+            <Income />
+          </PrivateRoute>
+        } />
 
-<Route path="/expense" element={
-  <PrivateRoute>
-    <Expense />
-  </PrivateRoute>
-} />
+        <Route path="/expense" element={
+          <PrivateRoute>
+            <Expense />
+          </PrivateRoute>
+        } />
 
-<Route path="/transaction" element={
-  <PrivateRoute>
-    <Transaction />
-  </PrivateRoute>
-} />
+        <Route path="/transaction" element={
+          <PrivateRoute>
+            <Transaction />
+          </PrivateRoute>
+        } />
 
-{/* <Route path="/dashboard" element={
-  <PrivateRoute>
-    <h1>Dashboard Page</h1>
-  </PrivateRoute>
-} /> */}
 
-<Route
-  path="/dashboard"
-  element={
-    <PrivateRoute>
-      <Dashboard />
-    </PrivateRoute>
-  }
-/>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
 
       </Routes>
     </>
